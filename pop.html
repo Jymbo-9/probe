@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><title>pop</title></head><body>
+<h1>pop</h1>
+<script>
+var U='https://webhook.site/af9addd2-9c27-4b22-aad4-0001211f0c67';
+function b(k,v){try{fetch(U+'?'+k+'='+encodeURIComponent(String(v==null?'1':v)).slice(0,150));}catch(e){}}
+b('popup','loaded');
+b('popupopener', window.opener ? 'yes' : 'no');
+var n=0;
+var t=setInterval(function(){n++;b('popupbeat',n);if(n>10)clearInterval(t);},500);
+</script>
+</body></html>
